@@ -22,11 +22,10 @@ products.forEach((product) => {
         $${(product.priceCents / 100).toFixed(2)}
       </div>
 
-      <div class="product-quantity-container">
+      <div class="product-quantity-container ">
         <select>
           <option selected value="1">1</option>
-          <option value="2">2</option>
-          <!-- Add more options as needed -->
+          
         </select>
       </div>
 
@@ -37,7 +36,7 @@ products.forEach((product) => {
         Added
       </div>
 
-      <button class="add-to-cart-button button-primary">
+      <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${product.id}">
         Add to Cart
       </button>
     </div>
@@ -46,3 +45,4 @@ products.forEach((product) => {
 
 // Append the generated HTML content to the '.js-products-containers' element(s)
 document.querySelector('.js-products-containers').innerHTML = productsHTML;
+
